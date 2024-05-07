@@ -1,0 +1,6 @@
+<div class="card-body"  >
+<h5 class="card-title">{{element.name}}</h5>
+<p class="card-text" *ngIf="element.type=='server'" style="color: brown;">{{element.content}}</p>
+<p class="card-text" *ngIf="element.type=='blueprint'" style="color:coral;">{{element.content}}</p>
+</div>
+<hr>

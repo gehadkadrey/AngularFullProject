@@ -1,5 +1,5 @@
 <app-header></app-header>
-<table class="table mt-2">
+<!-- <table class="table mt-2">
   <thead class="table-dark">
     <tr>
       <th class="table-active">
@@ -34,4 +34,27 @@
   </tr>
   </tbody>
 </table>
-<app-footer></app-footer>
+<div class="container">
+<app-core (servercreated)="AddServer($event)"
+ (blueprintcreated)="AddBluePrint($event)" 
+ >
+ </app-core>
+<div class=" m-3" style="width: 18rem;">
+  <app-server-element *ngFor="let element of serverElement" [element]="element"></app-server-element>
+ 
+   
+ 
+</div>
+</div> -->
+<div class="container mt-3 ">
+<app-add-product (newItem)="AddProductToList($event)"></app-add-product>
+</div>
+<br>
+<br>
+
+<section class="section-products mt-3">
+  <div class="container">
+<app-products *ngFor=" let productElement of  productList" [product]="productElement"></app-products>
+</div>
+</section>
+<!-- <app-footer></app-footer> -->
