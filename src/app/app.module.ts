@@ -10,6 +10,10 @@ import { CoreComponent } from './Component/core/core.component';
 import { ServerElementComponent } from './Component/server-element/server-element.component';
 import { ProductsComponent } from './Component/products/products.component';
 import { AddProductComponent } from './Component/add-product/add-product.component';
+import { MealsComponent } from './Component/meals/meals.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +23,15 @@ import { AddProductComponent } from './Component/add-product/add-product.compone
     CoreComponent,
     ServerElementComponent,
     ProductsComponent,
-    AddProductComponent
+    AddProductComponent,
+    MealsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot( { timeOut: 800,  preventDuplicates: true,}), // ToastrModule added
+
   ],
   providers: [],
   bootstrap: [AppComponent]

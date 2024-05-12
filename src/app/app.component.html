@@ -46,7 +46,8 @@
  
 </div>
 </div> -->
-<div class="container mt-3 ">
+<!------------------------------------------------------->
+<!-- <div class="container mt-3 ">
 <app-add-product (newItem)="AddProductToList($event)"></app-add-product>
 </div>
 <br>
@@ -56,5 +57,12 @@
   <div class="container">
 <app-products *ngFor=" let productElement of  productList" [product]="productElement"></app-products>
 </div>
-</section>
+</section> -->
+<button class="btn m-3" style="background-color: brown; color: white;" (click)="GetRandamDescription()"> Randam Meal Description</button>
+<div class="card-container">
+<app-meals *ngFor=" let meal of meals" [meal]="meal">
+  <img  [src]="meal.image" alt="Avatar" >
+</app-meals>
+</div>
+<!--------------------------------------------------->
 <!-- <app-footer></app-footer> -->

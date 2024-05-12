@@ -1,0 +1,8 @@
+<div class="card " style="width:90%">
+   <ng-content></ng-content>
+    <div class="container">
+      <h4><b>{{meal.name}}</b></h4>
+      <p>{{meal.description}}</p>
+      <button   style="width:60%" class=" btn btn-primary mb-2" (click)="DisplayMealDescription(meal.description)"> view Description</button>
+    </div>
+  </div>
