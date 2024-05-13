@@ -9,8 +9,8 @@
 // border-radius: 50% ;
 // }
 //if child has design in it and want to implement this design in element in parent component
-// :host-context(.salman-theme)
-// {
-//     color: white;
+:host-context(.salman-theme)
+{
+    color: white;
    
-// }
+}
