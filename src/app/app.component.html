@@ -58,10 +58,10 @@
 <app-products *ngFor=" let productElement of  productList" [product]="productElement"></app-products>
 </div>
 </section> -->
-<button class="btn m-3" style="background-color: brown; color: white;" (click)="GetRandamDescription()"> Randam Meal Description</button>
+<button class="btn m-3" style="background-color: brown; " (click)="GetRandamDescription()"> Randam Meal Description</button>
 <div class="card-container">
-<app-meals *ngFor=" let meal of meals" [meal]="meal">
-  <img  [src]="meal.image" alt="Avatar" >
+<app-meals appBaseHighlight #highlightexport='high' *ngFor=" let meal of meals" [meal]="meal" >
+  <img  [src]="meal.image" alt="Avatar" (click)="highlightexport.toggle()"  class="con">
 </app-meals>
 </div>
 <!--------------------------------------------------->

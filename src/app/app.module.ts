@@ -13,6 +13,7 @@ import { AddProductComponent } from './Component/add-product/add-product.compone
 import { MealsComponent } from './Component/meals/meals.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { BaseHighlightDirective } from './directive/base-highlight.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ToastrModule } from 'ngx-toastr';
     ServerElementComponent,
     ProductsComponent,
     AddProductComponent,
-    MealsComponent
+    MealsComponent,
+    BaseHighlightDirective
   ],
   imports: [
     BrowserModule,

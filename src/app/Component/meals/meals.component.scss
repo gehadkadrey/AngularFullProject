@@ -1,0 +1,16 @@
+//if we have childtag in parent component and need to implement design to this child tage use :host in this child component
+// :host{
+//     background-color:aquamarine;
+// }
+//if we have childtag in parent component and need to implement design to element in this child tag use :host in this child component
+// ::ng-deep .con{
+//     width: 200px;
+//     height: 200px;
+// border-radius: 50% ;
+// }
+//if child has design in it and want to implement this design in element in parent component
+// :host-context(.salman-theme)
+// {
+//     color: white;
+   
+// }
