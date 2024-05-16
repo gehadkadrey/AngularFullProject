@@ -67,7 +67,7 @@
 <!--------------------------------------------------->
 <!-- <app-footer></app-footer> -->
 <!-------------------------------------------------------------------------------------------------->
-<app-gamecontrol (increment)="incrementNum($event)"></app-gamecontrol>
+<!-- <app-gamecontrol (increment)="incrementNum($event)"></app-gamecontrol>
 <div *ngFor=" let num of incremental" >
 <div  *ngIf=" num%2==0">
   <app-even [element]="num"></app-even>
@@ -77,4 +77,23 @@
   <app-odd [element]="num"></app-odd>
 </div>
 <br/> <br/>
+</div> -->
+<!-------------------------------------------------------------------------------------------------->
+
+<div class="user-list m-3">
+  <h2>Active Users</h2>
+  <div class="user-item" *ngFor="let user of activeList">
+      <span>{{user}}</span>
+      <a href="#" *ngIf="activeList && activeList.length > 0" (click)="MakeUserUnActive(user)">Set to Inactive</a>
+  </div>
+ 
+</div>
+
+<div class="user-list m-3">
+  <h2>Inactive Users</h2>
+  <div class="user-item"  *ngFor="let user of UnactiveList">
+      <span>{{user}}</span>
+      <a href="#" *ngIf="UnactiveList && UnactiveList.length > 0" (click)="MakeUserActive(user)">Set to Active</a>
+  </div>
+  
 </div>

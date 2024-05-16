@@ -1,20 +1,40 @@
-.container {
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    height: 350px; /* Just an example height */
-  }
+// .container {
+//     display: flex;
+//     justify-content: center; /* Horizontally center */
+//     align-items: center; /* Vertically center */
+//     height: 350px; /* Just an example height */
+//   }
   
-  .card-container {
-    display: flex;
-    flex-wrap: nowrap; /* Ensures cards don't wrap to the next line */
-  }
+//   .card-container {
+//     display: flex;
+//     flex-wrap: nowrap; /* Ensures cards don't wrap to the next line */
+//   }
 
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap; /* This allows elements to wrap to the next line if they exceed the width */
-  }
+//   .flex-container {
+//     display: flex;
+//     flex-wrap: wrap; /* This allows elements to wrap to the next line if they exceed the width */
+//   }
   
-  .flex-item {
-    margin-right: 10px; /* Add some space between elements */
-  }
+//   .flex-item {
+//     margin-right: 10px; /* Add some space between elements */
+//   }
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.user-list {
+  margin: 20px 0;
+}
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.user-item a {
+  text-decoration: none;
+  color: blue;
+}

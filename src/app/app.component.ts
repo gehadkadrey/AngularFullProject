@@ -2,6 +2,8 @@ import { AfterContentInit, AfterViewInit, Component, EventEmitter, OnInit, Outpu
 import { Imeal } from './interface/meals';
 import { MealsComponent } from './Component/meals/meals.component';
 import { ToastrService } from 'ngx-toastr';
+import { ActivatedService } from './services/activated.service';
+import { throwIfEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -51,15 +53,10 @@ export class AppComponent implements OnInit {
 // }
 ////////////////////////////////////////////
 
-constructor(private toastr:ToastrService) {
-
-  
-}
+constructor(private toastr:ToastrService,private activedService:ActivatedService) {}
 
 
-ngOnInit(): void {
-  // Perform initialization tasks here, such as fetching data from a service
-}
+
 ////////////////////////////////////////////////////////////////////////////////////////////
 // @ViewChildren(MealsComponent) mealChildren!:QueryList<MealsComponent>;
 
@@ -92,11 +89,28 @@ ngOnInit(): void {
 //   }
 // }
 /////////////////////////////////////////////////////////////////////////////////////
-incremental:number[]=[];
-incrementNum(num:number)
-{
+// incremental:number[]=[];
+// incrementNum(num:number)
+// {
   
- this.incremental.push(num);
+//  this.incremental.push(num);
+// }
+////////////////////////////////////////////////////////////////////////////////////////////
+activeList:string[]=[];
+UnactiveList:string[]=[];
+ngOnInit(): void {
+  this.activeList=this.activedService.activeList;
+  this.UnactiveList=this.activedService.UnactiveList;
+    // Perform initialization tasks here, such as fetching data from a service
+  }
+MakeUserActive(userName:string)
+{
+this.activedService.activeUser(userName);
 }
+MakeUserUnActive(userName:string)
+{
+this.activedService.UnactiveUser(userName);
+}
+
 
 }
