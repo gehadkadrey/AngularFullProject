@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, OnInit, QueryList, ViewChildren, viewChild, viewChildren } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, EventEmitter, OnInit, Output, QueryList, ViewChildren, output, viewChild, viewChildren } from '@angular/core';
 import { Imeal } from './interface/meals';
 import { MealsComponent } from './Component/meals/meals.component';
 import { ToastrService } from 'ngx-toastr';
@@ -8,7 +8,8 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit , AfterContentInit,AfterViewInit {
+export class AppComponent implements OnInit {
+  //, AfterContentInit,AfterViewInit 
   title = 'fullDemo';
 
 //   serverElement:any=[];
@@ -54,38 +55,48 @@ constructor(private toastr:ToastrService) {
 
   
 }
-@ViewChildren(MealsComponent) mealChildren!:QueryList<MealsComponent>;
 
-meals:Imeal[]=[{name:"meal1",image:"/assets/images/meal1.jpg",description:"description1"},
-{name:"meal2",image:"/assets/images/meal4.jpg",description:"description2"},
-{name:"meal3",image:"/assets/images/meal1.jpg",description:"description3"},
-{name:"meal4",image:"/assets/images/meal4.jpg",description:"description4"}
-]
 
 ngOnInit(): void {
   // Perform initialization tasks here, such as fetching data from a service
 }
-ngAfterContentInit()
+////////////////////////////////////////////////////////////////////////////////////////////
+// @ViewChildren(MealsComponent) mealChildren!:QueryList<MealsComponent>;
+
+// meals:Imeal[]=[{name:"meal1",image:"/assets/images/meal1.jpg",description:"description1"},
+// {name:"meal2",image:"/assets/images/meal4.jpg",description:"description2"},
+// {name:"meal3",image:"/assets/images/meal1.jpg",description:"description3"},
+// {name:"meal4",image:"/assets/images/meal4.jpg",description:"description4"}
+// ]
+// ngAfterContentInit()
+// {
+//   //contentchild,content children
+// }
+// ngAfterViewInit()
+// {
+//   //view child, view children
+// //  console.log(this.mealChildren)
+//}
+
+// GetRandamDescription()
+// {
+//   let randomIndex=Math.floor(Math.random() *this.mealChildren.length);
+//   console.log(randomIndex)
+//   let randomDesc=this.mealChildren.toArray()[randomIndex].meal.description;
+//   //this.mealChildren.displayMealDescription(this.mealChildren[randomIndex].description)
+//  // this.toastr.show(randomDesc);
+//   // Accessing the first MealsComponent instance and calling DisplayMealDescription with a static value
+//   const firstMealComponent = this.mealChildren.first;
+//   if (firstMealComponent) {
+//     firstMealComponent.DisplayMealDescription(randomDesc);
+//   }
+// }
+/////////////////////////////////////////////////////////////////////////////////////
+incremental:number[]=[];
+incrementNum(num:number)
 {
-  //contentchild,content children
-}
-ngAfterViewInit()
-{
-  //view child, view children
-//  console.log(this.mealChildren)
-}
-GetRandamDescription()
-{
-  let randomIndex=Math.floor(Math.random() *this.mealChildren.length);
-  console.log(randomIndex)
-  let randomDesc=this.mealChildren.toArray()[randomIndex].meal.description;
-  //this.mealChildren.displayMealDescription(this.mealChildren[randomIndex].description)
- // this.toastr.show(randomDesc);
-  // Accessing the first MealsComponent instance and calling DisplayMealDescription with a static value
-  const firstMealComponent = this.mealChildren.first;
-  if (firstMealComponent) {
-    firstMealComponent.DisplayMealDescription(randomDesc);
-  }
+  
+ this.incremental.push(num);
 }
 
 }

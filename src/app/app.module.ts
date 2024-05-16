@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Component/header/header.component';
@@ -14,6 +13,10 @@ import { MealsComponent } from './Component/meals/meals.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { BaseHighlightDirective } from './directive/base-highlight.directive';
+import { GamecontrolComponent } from './Component/gamecontrol/gamecontrol.component';
+import { EvenComponent } from './Component/even/even.component';
+import { OddComponent } from './Component/odd/odd.component';
+
 
 
 @NgModule({
@@ -26,7 +29,11 @@ import { BaseHighlightDirective } from './directive/base-highlight.directive';
     ProductsComponent,
     AddProductComponent,
     MealsComponent,
-    BaseHighlightDirective
+    BaseHighlightDirective,
+    GamecontrolComponent,
+    EvenComponent,
+    OddComponent
+
   ],
   imports: [
     BrowserModule,

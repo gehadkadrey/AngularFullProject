@@ -53,7 +53,7 @@ export class BaseHighlightDirective {
 // get cssClass() {
 //   return 'true';
 // }
-///////////////////
+// ///////////////////
 toggle()
 {
   console.log("g");
