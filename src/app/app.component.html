@@ -69,13 +69,13 @@
 <!-------------------------------------------------------------------------------------------------->
 <!-- <app-gamecontrol (increment)="incrementNum($event)"></app-gamecontrol>
 <div *ngFor=" let num of incremental" >
-<div  *ngIf=" num%2==0">
+<div  *ngIf=" num%2==0 ;else oddTemp">
   <app-even [element]="num"></app-even>
 </div>
 
-<div  *ngIf=" num%2 !==0">
+<ng-template  #oddTemp>
   <app-odd [element]="num"></app-odd>
-</div>
+</ng-template>
 <br/> <br/>
 </div> -->
 <!-------------------------------------------------------------------------------------------------->
