@@ -55,11 +55,12 @@ export class AppComponent implements OnInit {
 
 constructor(private toastr:ToastrService,private activedService:ActivatedService) {}
 
-
+///////////////
+//////////////
+//////////////jjjjjjj
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 // @ViewChildren(MealsComponent) mealChildren!:QueryList<MealsComponent>;
-
 // meals:Imeal[]=[{name:"meal1",image:"/assets/images/meal1.jpg",description:"description1"},
 // {name:"meal2",image:"/assets/images/meal4.jpg",description:"description2"},
 // {name:"meal3",image:"/assets/images/meal1.jpg",description:"description3"},
